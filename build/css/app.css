@@ -4421,8 +4421,8 @@ textarea.form-control-lg {
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem;
+  border: 0 solid rgba(0, 0, 0, 0.125);
+  border-radius: 0;
 }
 .card > hr {
   margin-right: 0;
@@ -4434,13 +4434,13 @@ textarea.form-control-lg {
 }
 .card > .list-group:first-child {
   border-top-width: 0;
-  border-top-left-radius: calc(0.25rem - 1px);
-  border-top-right-radius: calc(0.25rem - 1px);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 .card > .list-group:last-child {
   border-bottom-width: 0;
-  border-bottom-right-radius: calc(0.25rem - 1px);
-  border-bottom-left-radius: calc(0.25rem - 1px);
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
 .card > .card-header + .list-group,
 .card > .list-group + .card-footer {
@@ -4449,7 +4449,7 @@ textarea.form-control-lg {
 
 .card-body {
   flex: 1 1 auto;
-  padding: 1rem 1rem;
+  padding: 1rem 0;
 }
 
 .card-title {
@@ -4466,38 +4466,38 @@ textarea.form-control-lg {
 }
 
 .card-link + .card-link {
-  margin-left: 1rem;
+  margin-left: 0;
 }
 
 .card-header {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0;
   margin-bottom: 0;
   background-color: rgba(0, 0, 0, 0.03);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  border-bottom: 0 solid rgba(0, 0, 0, 0.125);
 }
 .card-header:first-child {
-  border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+  border-radius: 0 0 0 0;
 }
 
 .card-footer {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0;
   background-color: rgba(0, 0, 0, 0.03);
-  border-top: 1px solid rgba(0, 0, 0, 0.125);
+  border-top: 0 solid rgba(0, 0, 0, 0.125);
 }
 .card-footer:last-child {
-  border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px);
+  border-radius: 0 0 0 0;
 }
 
 .card-header-tabs {
-  margin-right: -0.5rem;
+  margin-right: 0;
   margin-bottom: -0.5rem;
-  margin-left: -0.5rem;
+  margin-left: 0;
   border-bottom: 0;
 }
 
 .card-header-pills {
-  margin-right: -0.5rem;
-  margin-left: -0.5rem;
+  margin-right: 0;
+  margin-left: 0;
 }
 
 .card-img-overlay {
@@ -4507,7 +4507,7 @@ textarea.form-control-lg {
   bottom: 0;
   left: 0;
   padding: 1rem;
-  border-radius: calc(0.25rem - 1px);
+  border-radius: 0;
 }
 
 .card-img,
@@ -4518,14 +4518,14 @@ textarea.form-control-lg {
 
 .card-img,
 .card-img-top {
-  border-top-left-radius: calc(0.25rem - 1px);
-  border-top-right-radius: calc(0.25rem - 1px);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 .card-img,
 .card-img-bottom {
-  border-bottom-right-radius: calc(0.25rem - 1px);
-  border-bottom-left-radius: calc(0.25rem - 1px);
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .card-group > .card {
@@ -11133,4 +11133,66 @@ textarea.form-control-lg {
 }
 .descuentos .buscar {
   border-radius: 0;
+}
+
+.nav .active {
+  color: #000;
+}
+
+.categoria-curso {
+  border: 1px solid #6A6F73;
+}
+
+.listado-cursos {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
+}
+.listado-cursos .curso {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-top: var(--bs-gutter-y);
+}
+@media (min-width: 576px) {
+  .listado-cursos .curso {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+}
+@media (min-width: 768px) {
+  .listado-cursos .curso {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+  }
+}
+@media (min-width: 992px) {
+  .listado-cursos .curso {
+    flex: 0 0 auto;
+    width: 20%;
+  }
+}
+.listado-cursos .curso .titulo {
+  font-family: Arial, Heveltica, sans-serif;
+  font-size: 1rem;
+}
+.listado-cursos .curso .instructor,
+.listado-cursos .curso .total {
+  font-size: 0.8rem;
+  margin: 0;
+}
+.listado-cursos .curso .calificacion {
+  width: 6rem;
+}
+.listado-cursos .curso .precio {
+  font-size: 0.9rem;
+}
+.listado-cursos .curso .precio span {
+  font-size: 0.7rem;
 }
